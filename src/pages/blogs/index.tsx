@@ -25,9 +25,12 @@ const BlogIndex: React.FC<PageProps<mdxData>> = ({ data }) => (
   <>
     <div>
       <h1>Blog</h1>
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
       <div className="card-container">
         {data.allMdx.edges.map((edge: Edge) => (
-          <Link to={`/article/article`}>
+          <Link to={`/article/${edge.node.frontmatter.slug}`}>
             <div className="card" key={edge.node.id}>
               <h3 className="card-title">{edge.node.frontmatter.title}</h3>
               <h3 className="card-date">{edge.node.frontmatter.date}</h3>
