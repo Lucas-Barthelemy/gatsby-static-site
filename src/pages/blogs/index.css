@@ -23,3 +23,8 @@
     color: #888888;
     text-align: right;
 }
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
